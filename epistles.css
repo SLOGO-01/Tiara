@@ -1,0 +1,188 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "outfit", serif;
+}
+
+body {
+    padding: 10px;
+    background-color: rgb(238, 127, 146);
+}
+
+.logo {
+    font-family: "chillax", serif;
+    font-weight: 600;
+    font-size: 24px;
+    position: fixed;
+    top: 20px;
+    z-index: 1001;
+    cursor: pointer;
+
+    /* left: 15px; */
+
+}
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger div,
+.hamburger div::before,
+.hamburger div::after {
+    content: '';
+    background-color: #000000;
+    height: 2.5px;
+    width: 30px;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger div::before,
+.hamburger div::after {
+    position: absolute;
+}
+
+.hamburger div::before {
+    top: -10px;
+}
+
+.hamburger div::after {
+    top: 10px;
+}
+
+/* Animate to X when checked */
+.menu-toggle:checked+.hamburger div {
+    background: transparent;
+}
+
+.menu-toggle:checked+.hamburger div::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle:checked+.hamburger div::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Overlay menu */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-overlay ul li {
+    margin-bottom: 50px;
+}
+
+.menu-overlay ul li a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-overlay ul li a:hover {
+    color: #f8b400;
+}
+
+/* Show overlay when checked */
+.menu-toggle:checked~.menu-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content {
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.envelope {
+    border-radius: 20px;
+    width: 60vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.letter {
+    border-radius: 25px;
+    margin-top: 5vh;
+    width: 70%;
+    height: 65vh;
+    animation: popIn 0.5s ease forwards;
+    box-shadow: 0 0 25px #e19292;
+    z-index: 15;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

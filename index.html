@@ -1,27 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiara's Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link
+    href="https://api.fontshare.com/css?f[]=penciero@400,500&f[]=clash-display@400,500&f[]=chillax@100,200,400&f[]=satoshi@400,500&f[]=epilogue@400,500&display=swap"
+    rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=outfit@100,200,300,400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="landing-page.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      // burst style confetti
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+
+      // you can do more bursts or even loop if you like
+      // setTimeout(() => confetti({...}), 1000);
+    });
+  </script>
+
 </head>
+
 <body>
-    <section>
-        <div>
-            <h2>Welcome, My Queen</h2>
-            <label for="">Name:</label>
-            <input type="text" placeholder="The officially adopted one...">
+  <h2 class="logo">Tiara</h2>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <div></div> <!-- middle line -->
+  </label>
 
-            <label for="">Password:</label>
-            <input type="text" placeholder="Your very simple password...">
+  <nav class="menu-overlay">
+    <ul>
+      <li><a href="index.html">Happy Birthday</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="epistles.html">Epistle of Slogo</a></li>
+    </ul>
+  </nav>
 
-            <button>Login</button>
+  <section class="content">
+
+    <h2>Happy Birthday, Tiaraoluwa💖</h2>
+
+
+    <!-- Swiper -->
+    <div class="Images swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./Assets/Images/landing screen 4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/IMG-20250413-WA0000(1).jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/fav pic 4.2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/fav pic 8(Dark).jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/landing screen 3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/landing screen.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/fav pic 5.2.jpg" alt=""></div>
+        <!-- <div class="swiper-slide"><video width="70%" height="70%"> <source src="./Assets/Video/VID-20250612-WA0048.mp4" type="video/mp4"></video></div> -->
+        <div class="swiper-slide"><img src="./Assets/Images/Hands Pic.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./Assets/Images/Fav pic 1.jpg" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+
+
+    <div class="wish-board">
+      <h3>Message Board</h3>
+      <div class="Wishes ">
+        <p>“Happy birthday to you. The lord will continue to keep his countenance upon you. Thank you for loving and
+          caring for my very good friend. ” ~ <strong>Praise</strong> </p>
+      </div>
+      <div class="Wishes">
+        <p>"Happy Birthday our wife. Wishing you everything you pray for and more. have a wonderful year Ahead! Thank
+          you for making Semilogo happy. You're the best!" ~ <strong>Joshua</strong> </p>
+      </div>
+      <div class="Wishes simi">
+        <p>"Hi baby, it's your favorite girl, Simi, I want you to know I love and fancy you every time, and every moment
+          I see you, on this day which marks your 20th day, I hope you have a lovely day ahead and a wonderful year
+          ahead, May the Lord continues to bless you abundantly, and strengthening for the rest of your life 💕
+          I love you my girl💕💕
+          (when you finish reading this come and give me a bigggg hug💕)
+          " <Strong>Simi</Strong></p>
+      </div>
+      <div class="Wishes">
+        <p> "Happy Birthday Tolu, May God continue to inspire you and your words. I like the way you deliver Your Spoken
+          words" ~ <strong>Eluwa(Emmanuel)</strong> </p>
+      </div>
+      <div class="Wishes">
+        <p>"Happy Birthday,Tolu. God bless your new age with answered prayers and unending Grace. enjoy your day!"~
+          <strong>Shope</strong>
+        </p>
+      </div>
+      <div class="Wishes">
+        <p>"Happy Birthday, Tolu!
+          Wishing you lots of joy, laughter, and sweet moments today. Hope your day is filled with everything you love,
+          and may this new year bring you even more reasons to smile." ~ <strong>Weje</strong></p>
+      </div>
+      <div class="Wishes">
+        <p>"Happy birthday Tolu, thank for bringing joy into slogos life the happiest I have seen him is with you so you
+          must be doing something right. Keep on being the great person you are. " ~ <strong>Osebor</strong></p>
+      </div>
+    </div>
+
+
+
+    <div class="swiper mySwiper">
+      <h3>Quotes</h3>
+      <p>Gentle Reminders...</p>
+      <div class="Quote-wrapper swiper-wrapper">
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"You are altogether beautiful, my love; there is no flaw in you"</p>
+            <p>~</p>
+            <p><Strong>Solomon</Strong></p>
+          </div>
         </div>
-
-        <div>
-
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"In you, I’ve found the love of my life and my closest, truest friend."</p>
+            <p>~</p>
+            <p><strong>Anonymous</strong></p>
+          </div>
         </div>
-    </section>
-    
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">
+              "I have found the one whom my soul loves."</p>
+            <p>~</p>
+            <p><strong>Solomon</strong> </p>
+          </div>
+        </div>
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"I swear I couldn’t love you more than I do right now, and yet I know I will
+              tomorrow."</p>
+            <p>~</p>
+            <p> <strong>Leo Christopher</strong></p>
+          </div>
+        </div>
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"You have made my heart beat faster, my sister, my bride; You have made my
+              heart beat faster with a single glance of your eyes"</p>
+            <p>~</p>
+            <p><strong>Solomon</strong></p>
+          </div>
+        </div>
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"Grow old along with me! The best is yet to be."</p>
+            <p>~</p>
+            <p><Strong>Robert Browning</Strong></p>
+          </div>
+        </div>
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"Turn your eyes from me; they overwhelm me"</p>
+            <p>~</p>
+            <p><strong>Solomon</strong></p>
+          </div>
+        </div>
+        <div class="quotes swiper-slide">
+          <div>
+            <p style="font-style: italic;">"I am my beloved's and my beloved is mine"</p>
+            <p>~</p>
+            <p><strong>Solomon</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+
+    <audio id="bg-audio" loop autoplay>
+      <source src="./Assets/Audio/Sunmisola_Agbebi_-_Adun_CeeNaija.com_.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- 🎵 AUDIO PLAYER -->
+    <h3 style="margin-top: 50px;">Control the music here</h3>
+    <div
+      class="fixed bottom-4 left-4 bg-white/70 backdrop-blur-md shadow-md rounded-xl p-4 flex items-center space-x-4 z-50">
+      <button id="playPauseBtn" class="text-pink-600 hover:text-pink-800 text-xl" onclick="toggleAudio()">▶️/⏸️</button>
+
+      <select id="trackSelector" onchange="changeTrack(this.value)"
+        class="bg-pink-100 text-pink-800 p-1 rounded-md shadow-sm">
+        <option value="./Assets/Audio/Sunmisola_Agbebi_-_Adun_CeeNaija.com_.mp3">💖 Song 1</option>
+        <option value="./Assets/Audio/Pelumi_Deborah_-_OmoBa.mp3">🌸 Song 2</option>
+        <option value="./Assets/Audio/Anendlessocean_-_Love_Practitioner.mp3">💫 Track 3</option>
+        <option value="./Assets/Audio/Anendlessocean-Lmly-(CeeNaija.com).mp3">🌸 Track 4</option>
+        <option value="./Assets/Audio/Anendlessocean_-_P_A_CeeNaija.com_.mp3">🌸 Track 5</option>
+        <option value="./Assets/Audio/Anendlessocean_-_Bire_CeeNaija.com_.mp3">🌸 Track 6</option>
+        <option value="./Assets/Audio/Anendlessocean_-_Alone_CeeNaija.com_.mp3">🌸 Track 7</option>
+      </select>
+    </div>
+
+  </section>
+  <script>
+    const audio = document.getElementById("bg-audio");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const trackSelector = document.getElementById("trackSelector");
+
+    // Ensure autoplay works
+    window.addEventListener('DOMContentLoaded', () => {
+      audio.play().catch(e => {
+        // Autoplay might be blocked, update button icon accordingly
+        playPauseBtn.textContent = "▶️";
+      });
+    });
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "⏸️";
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = "▶️";
+      }
+    }
+
+    function changeTrack(trackSrc) {
+      audio.src = trackSrc;
+      audio.play();
+      playPauseBtn.textContent = "⏸️";
+    }
+  </script>
+
+
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <!-- <script>
+    function createBalloon() {
+  const balloon = document.createElement('div');
+  balloon.classList.add('balloon');
+  balloon.style.left = Math.random() * window.innerWidth + 'px';
+  balloon.style.animationDuration = (6 + Math.random() * 4) + 's';
+  document.body.appendChild(balloon);
+  setTimeout(() => balloon.remove(), 10000);
+}
+setInterval(createBalloon, 500);
+
+</script> -->
 </body>
+
 </html>

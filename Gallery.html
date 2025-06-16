@@ -13,28 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="Gallery.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            // burst style confetti
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+
+            // you can do more bursts or even loop if you like
+            // setTimeout(() => confetti({...}), 1000);
+        });
+    </script>
 </head>
 
 <body>
-   
-        <h2 class="logo">Tiara</h2>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">
-            <div></div> <!-- middle line -->
-        </label>    
-   
+
+    <h2 class="logo">Tiara</h2>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+        <div></div> <!-- middle line -->
+    </label>
+
 
     <nav class="menu-overlay">
         <ul>
-            <li><a href="landing-page.html">Happy Birthday</a></li>
+            <li><a href="index.html">Happy Birthday</a></li>
             <li><a href="Gallery.html">Gallery</a></li>
-            <li><a href="epistles.css">Epistles of Slogo</a></li>
+            <li><a href="epistles.html">Epistle of Slogo</a></li>
         </ul>
     </nav>
 
 
     <section class="content">
-        
+
         <h2>Memory lane</h1>
             <p>I've known you less than six months...yet it feels like six years.
             </p>
@@ -42,74 +57,158 @@
             <p>Note that, this would be longer if you did'nt delete pictures so much (:</p>
 
 
-        <div class="memory-card"> 
-            <div class="memory-text"> I really don't know where to start...</div>  <img src="" alt="">
+            <div class="memory-card">
+                <div class="memory-text">I don't really know how best to caption these memories, but i'm sure you
+                    remember this one more than I do </div>
+                <div class="memory-image">
+                    <img src="./Assets/Images/Throwback.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-text">A more Recent Throwback. #FineGirl</div>
+                <div class="memory-image"> <img src="./Assets/Images/More recent Throwback.jpg" alt=""></div>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-text">Our first Photograph together(I think?)</div>
+                <div class="memory-image"> <img src="./Assets/Images/First joint pic.jpg" alt=""></div>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-text">"See my baby Guysss💕"</div>
+                <div class="memory-image"> <video width="100%" height="100%" controls>
+                        <source src="./Assets/Video/see my Baby guys.mp4" type="video/mp4">
+                    </video></div>
+            </div>
+
+
+            <div class="memory-card">
+                <div class="memory-text">One of our Customary walks. (I wonder if you remember what you were accusing me
+                    of this day...)</div>
+                <div class="memory-image"> <img src="./Assets/Images/second pic.jpg" alt=""></div>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-text">Picture Nighttt!💕</div>
+                <div class="memory-image"> <img src="./Assets/Images/Picture night.jpg" alt=""></div>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-text">Cultural Sabbath; ft. Joshua Onifoto</div>
+                <div class="memory-image"> <img src="./Assets/Images/cultural sabbath.jpg" alt=""></div>
+            </div>
+            <!-- <div class="memory-card"> 
+            <div class="memory-text"></div>  <div class="memory-image"> <video width="100%" height="100%" controls> <source src="./Assets/Video/cultural Sabbath.mp4" type="video/mp4"></video></div>
         </div>
+ -->
+            <div class="memory-card">
+                <div class="memory-text">One of my favourite suggestions ever.💕</div>
+                <div class="memory-image"> <img src="./Assets/Images/Hands Pic.jpg" alt=""></div>
+            </div>
 
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
-        
-        <div class="memory-card"> 
-            <div class="memory-text"></div>  <img src="" alt="">
-        </div>
+            <div class="memory-card">
+                <div class="memory-text">Hii Guyssssssss!!</div>
+                <div class="memory-image"> <video width="100%" height="100%" controls>
+                        <source src="./Assets/Video/Farewell.mp4" type="video/mp4">
+                    </video></div>
+            </div>
 
 
-        <h2>Pick of the Bunch</h2>
-        <p>Any picture you take is my favourite...</p>
-        <p>But here are my 'favourite' favourites</p>
+            <h2 style="margin-top: 30px;">Pick of the Bunch</h2>
+            <p>Any picture you take is my favourite...</p>
+            <p>But here are my 'favourite' favourites</p>
 
 
-          <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-      <div class="swiper-slide"><img src="" alt=""></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./Assets/Images/Fav pic 1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/Fav pic 2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/Fav pic 5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 6.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 7.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 9.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./Assets/Images/fav pic 8(Dark).jpg" alt=""></div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
 
 
+            <audio id="bg-audio" autoplay>
+                <source src="./Assets/Audio/Anendlessocean_-_Bire_CeeNaija.com_.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- 🎵 AUDIO PLAYER -->
+            <h3 style="margin-top: 50px;">Control the music here</h3>
+            <div
+                class="fixed bottom-4 left-4 bg-white/70 backdrop-blur-md shadow-md rounded-xl p-4 flex items-center space-x-4 z-50">
+                <button id="playPauseBtn" class="text-pink-600 hover:text-pink-800 text-xl"
+                    onclick="toggleAudio()">▶️/⏸️</button>
+
+                <select id="trackSelector" onchange="changeTrack(this.value)"
+                    class="bg-pink-100 text-pink-800 p-1 rounded-md shadow-sm">
+                    <option value="./Assets/Audio/Sunmisola_Agbebi_-_Adun_CeeNaija.com_.mp3">💖 Song 1</option>
+                    <option value="./Assets/Audio/Pelumi_Deborah_-_OmoBa.mp3">🌸 Song 2</option>
+                    <option value="./Assets/Audio/Anendlessocean_-_Love_Practitioner.mp3">💫 Track 3</option>
+                    <option value="./Assets/Audio/Anendlessocean-Lmly-(CeeNaija.com).mp3">🌸 Track 4</option>
+                    <option value="./Assets/Audio/Anendlessocean_-_P_A_CeeNaija.com_.mp3">🌸 Track 5</option>
+                    <option value="./Assets/Audio/Anendlessocean_-_Bire_CeeNaija.com_.mp3">🌸 Track 6</option>
+                    <option value="./Assets/Audio/Anendlessocean_-_Alone_CeeNaija.com_.mp3">🌸 Track 7</option>
+                </select>
+            </div>
     </section>
+
+    <script>
+        const audio = document.getElementById("bg-audio");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const trackSelector = document.getElementById("trackSelector");
+
+        // Ensure autoplay works
+        window.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(e => {
+                // Autoplay might be blocked, update button icon accordingly
+                playPauseBtn.textContent = "▶️";
+            });
+        });
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = "▶️";
+            }
+        }
+
+        function changeTrack(trackSrc) {
+            audio.src = trackSrc;
+            audio.play();
+            playPauseBtn.textContent = "⏸️";
+        }
+    </script>
+
+
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

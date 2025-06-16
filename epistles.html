@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+        href="https://api.fontshare.com/css?f[]=penciero@400,500&f[]=clash-display@400,500&f[]=chillax@100,200,400&f[]=satoshi@400,500&f[]=epilogue@400,500&display=swap"
+        rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=outfit@100,200,300,400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="epistles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            // burst style confetti
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+
+            // you can do more bursts or even loop if you like
+            // setTimeout(() => confetti({...}), 1000);
+        });
+    </script>
+</head>
+
+<body>
+    <h2 class="logo">Tiara</h2>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+        <div></div> <!-- middle line -->
+    </label>
+
+
+    <nav class="menu-overlay">
+        <ul>
+            <li><a href="index.html">Happy Birthday</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="epistles.html">Epistle of Slogo</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+
+        <h2 style="margin-bottom: 10px;">The Epistle</h2>
+        <p>This where I kept the speech I was talking about.</p>
+        <p style="margin-bottom: 20px;">Not all of it though...But click the envelope to begin.</p>
+
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <img src="./Assets/Images/envelope (1).jpg" class="envelope" id="envelope" alt="Envelope"
+                onclick="revealLetter()">
+
+        </div>
+
+        <!-- Overlay and letter -->
+        <div class="overlay" id="overlay" onclick="closeLetter(event)">
+            <img src="./Assets/Images/letter.png" class="letter" alt="Letter" id="letter">
+        </div>
+
+        <p style="margin-top: 20px;">P.S: The rest of the letter will be sent to your DM, for the purpose of fitting the
+            space available.</p>
+        <p>So when you're done here, you know where to meet me...💕</p>
+
+
+        <audio id="bg-audio" autoplay>
+            <source src="./Assets/Audio/Pelumi_Deborah_-_OmoBa.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- 🎵 AUDIO PLAYER -->
+        <h3 style="margin-top: 50px;">Control the music here</h3>
+        <div
+            class="fixed bottom-4 left-4 bg-white/70 backdrop-blur-md shadow-md rounded-xl p-4 flex items-center space-x-4 z-50">
+            <button id="playPauseBtn" class="text-pink-600 hover:text-pink-800 text-xl"
+                onclick="toggleAudio()">▶️/⏸️</button>
+
+            <select id="trackSelector" onchange="changeTrack(this.value)"
+                class="bg-pink-100 text-pink-800 p-1 rounded-md shadow-sm">
+                <option value="./Assets/Audio/Sunmisola_Agbebi_-_Adun_CeeNaija.com_.mp3">💖 Song 1</option>
+                <option value="./Assets/Audio/Pelumi_Deborah_-_OmoBa.mp3">🌸 Song 2</option>
+                <option value="./Assets/Audio/Anendlessocean_-_Love_Practitioner.mp3">💫 Track 3</option>
+                <option value="./Assets/Audio/Anendlessocean-Lmly-(CeeNaija.com).mp3">🌸 Track 4</option>
+                <option value="./Assets/Audio/Anendlessocean_-_P_A_CeeNaija.com_.mp3">🌸 Track 5</option>
+                <option value="./Assets/Audio/Anendlessocean_-_Bire_CeeNaija.com_.mp3">🌸 Track 6</option>
+                <option value="./Assets/Audio/Anendlessocean_-_Alone_CeeNaija.com_.mp3">🌸 Track 7</option>
+            </select>
+        </div>
+    </section>
+
+
+    <script>
+        const audio = document.getElementById("bg-audio");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const trackSelector = document.getElementById("trackSelector");
+
+        // Ensure autoplay works
+        window.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(e => {
+                // Autoplay might be blocked, update button icon accordingly
+                playPauseBtn.textContent = "▶️";
+            });
+        });
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = "▶️";
+            }
+        }
+
+        function changeTrack(trackSrc) {
+            audio.src = trackSrc;
+            audio.play();
+            playPauseBtn.textContent = "⏸️";
+        }
+    </script>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const envelope = document.getElementById('envelope');
+        const letter = document.getElementById('letter');
+
+        function revealLetter() {
+            overlay.style.display = 'flex';
+            envelope.style.display = 'none';
+        }
+
+        function closeLetter(event) {
+            // Only close if the user clicks outside the letter image
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+                envelope.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
